@@ -1,0 +1,51 @@
+name: deploy-platform-cms
+
+# platform-web の build-fe.yml を踏襲しつつ、SSG (静的書き出し) 用に GitHub Pages へ
+# デプロイする構成。push to main / tag (v*) / 手動 のいずれでもビルドし、Pages に公開する。
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+# GITHUB_TOKEN に Pages デプロイ権限を付与する。
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時実行は最新だけ残す (進行中のデプロイはキャンセルしない)。
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/configure-pages@v5
+      - run: npm ci
+      - name: Build static export
+        run: npm run build
+        env:
+          # 独自ドメイン (apex) 配信なので basePath 無し。SITE_URL は canonical/OG 用。
+          NEXT_PUBLIC_SITE_URL: https://terumiu.com
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          # next.config.ts の output:'export' で out/ に静的サイトが生成される。
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

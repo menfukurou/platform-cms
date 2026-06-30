@@ -1,0 +1,217 @@
+{
+  "common": {
+    "brand": "Terumiu",
+    "brandFull": "テルミュ（Terumiu）",
+    "language": {
+      "label": "言語",
+      "ja-JP": "日本語",
+      "en-US": "English"
+    }
+  },
+  "nav": {
+    "service": "サービス",
+    "about": "About",
+    "journal": "Journal",
+    "contact": "お問い合わせ",
+    "menuOpen": "メニューを開く",
+    "menuClose": "メニューを閉じる",
+    "launchApp": "Grader を開く"
+  },
+  "home": {
+    "meta": {
+      "title": "自分を知る、ひとつのアセスメントから。",
+      "description": "Terumiu は、性格・スキル・興味関心を測る公開アセスメントサービス「Grader」を運営しています。新しい自分の側面を発見するためのプロダクトと知見を発信します。"
+    },
+    "hero": {
+      "kicker": "Terumiu — Product Studio",
+      "title": "自分を知る、\nひとつのアセスメントから。",
+      "lead": "性格・スキル・興味関心。Terumiu は、誰でも気軽に試せる公開アセスメントを通じて「新しい自分の側面に出会う」体験をつくっています。",
+      "ctaPrimary": "サービスを見る",
+      "ctaSecondary": "Grader を試す"
+    },
+    "visual": {
+      "title": "あなたの結果",
+      "score": "総合",
+      "traits": ["探究心", "協調性", "創造性", "論理性", "行動力"],
+      "tags": ["#バランス型", "#好奇心が高い"]
+    },
+    "stats": {
+      "items": [
+        { "value": "100+", "label": "公開アセスメント" },
+        { "value": "8", "label": "対応言語" },
+        { "value": "無料", "label": "ですぐに体験" }
+      ]
+    },
+    "service": {
+      "kicker": "Our Service",
+      "title": "Grader — 公開アセスメント・プラットフォーム",
+      "lead": "性格、スキル、興味関心。気になるアセスメントを選んで答えるだけで、データに基づいた結果と新しい気づきが得られます。結果はログインで保存・共有も可能です。",
+      "features": [
+        {
+          "title": "多彩なアセスメント",
+          "body": "性格診断からスキルチェックまで、目的に合わせて選べる公開アセスメントを継続的に追加しています。"
+        },
+        {
+          "title": "わかりやすい結果",
+          "body": "回答後すぐに、可視化されたスコアと解説を表示。自分の傾向を直感的に理解できます。"
+        },
+        {
+          "title": "多言語対応",
+          "body": "日本語・英語をはじめ複数言語に対応。世界中のユーザーが同じ体験を共有できます。"
+        }
+      ],
+      "cta": "Grader を開く"
+    },
+    "values": {
+      "kicker": "What we value",
+      "title": "わたしたちが大切にしていること",
+      "items": [
+        {
+          "title": "誠実なデータ設計",
+          "body": "アセスメントの設計と結果の見せ方に責任を持ち、過度に煽らない、信頼できる体験を追求します。"
+        },
+        {
+          "title": "やさしいプロダクト",
+          "body": "専門知識がなくても直感的に使えること。誰にとっても開かれた、わかりやすい設計を大切にします。"
+        },
+        {
+          "title": "継続的な発信",
+          "body": "新しいアセスメントや学びを Journal で発信し、自己理解のきっかけを届け続けます。"
+        }
+      ]
+    },
+    "journal": {
+      "kicker": "Journal",
+      "title": "最新のお知らせ",
+      "lead": "新しいアセスメントの紹介や、プロダクトの裏側、自己理解に役立つ知見をお届けします。",
+      "viewAll": "Journal をすべて見る",
+      "readMore": "続きを読む"
+    },
+    "about": {
+      "kicker": "About us",
+      "title": "ていねいにつくる、プロダクトスタジオ。",
+      "lead": "Terumiu は、Web サービスやプロダクトを企画・運営するスタジオです。いまは「Grader」を通じて、自分を知るきっかけを届けています。",
+      "cta": "Terumiu について"
+    },
+    "cta": {
+      "title": "さっそく、ひとつ試してみませんか。",
+      "lead": "登録なしでもすぐに体験できます。気になるアセスメントから、新しい自分を見つけにいきましょう。",
+      "button": "Grader を試す"
+    }
+  },
+  "service": {
+    "meta": {
+      "title": "サービス",
+      "description": "Terumiu が運営する公開アセスメント・プラットフォーム「Grader」のご紹介。"
+    },
+    "hero": {
+      "kicker": "Our Service",
+      "title": "Grader",
+      "lead": "性格・スキル・興味関心を測る、公開アセスメント・プラットフォーム。気になるものを選んで答えるだけで、新しい自分の側面に出会えます。",
+      "cta": "Grader を開く"
+    },
+    "capabilities": {
+      "kicker": "Features",
+      "title": "Grader でできること"
+    },
+    "howTitle": "使い方はかんたん",
+    "sections": [
+      {
+        "title": "アセスメントを選ぶ",
+        "body": "性格、スキル、興味関心など、カテゴリや難易度から気になるアセスメントを探せます。新着・人気順での並び替えにも対応しています。"
+      },
+      {
+        "title": "答えて、すぐに結果",
+        "body": "数問から数十問まで、テンポよく回答。終わったその場で、可視化されたスコアと解説が表示されます。"
+      },
+      {
+        "title": "保存して、ふり返る",
+        "body": "ログインすれば結果を保存して、あとから見返したり比較したりできます。シェアにも対応しています。"
+      }
+    ],
+    "audience": {
+      "kicker": "Who it's for",
+      "title": "こんな方に",
+      "items": [
+        { "title": "自分を見つめ直したい", "body": "性格や強みを、客観的にとらえ直したい方に。" },
+        { "title": "学びと成長のヒントに", "body": "次の一歩のきっかけを探している方に。" },
+        { "title": "チームで活用したい", "body": "コミュニティやチームで、相互理解を深めたい方に。" }
+      ]
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "Terumiu 運営事務局について。Web サービスやプロダクトをつくるスタジオが大切にしている考え方をご紹介します。"
+    },
+    "hero": {
+      "kicker": "About us",
+      "title": "つくることで、\n毎日に発見を。",
+      "lead": "Terumiu は、Web サービスやプロダクトを企画・運営するスタジオです。ひとつひとつの体験を、ていねいにつくっています。"
+    },
+    "mission": {
+      "title": "ミッション",
+      "body": "Terumiu は、テクノロジーとデザインで、毎日にちいさな発見を生み出すことを目指しています。いまはサービス「Grader」を通じて、一人ひとりが新しい自分の側面に出会える場所をつくっています。"
+    },
+    "story": {
+      "title": "なぜつくるのか",
+      "body": "大げさな仕組みではなく、ふと試したくなる手触りのよいプロダクトを。煽らず、ていねいに。はじめの一歩を、できるだけ軽やかにすることを目指しています。"
+    },
+    "operator": {
+      "title": "運営者情報",
+      "items": [
+        { "label": "運営", "value": "Terumiu 運営事務局" },
+        { "label": "事業内容", "value": "Web サービス・プロダクトの企画・開発・運営" },
+        { "label": "提供中のサービス", "value": "公開アセスメント「Grader」" }
+      ],
+      "contactLabel": "お問い合わせ",
+      "contactBody": "ご連絡はお問い合わせフォームよりお願いいたします。"
+    }
+  },
+  "journal": {
+    "meta": {
+      "title": "Journal",
+      "description": "新しいアセスメントの紹介や、プロダクトの裏側、自己理解に役立つ知見を発信しています。"
+    },
+    "hero": {
+      "kicker": "Journal",
+      "title": "Journal",
+      "lead": "新しいアセスメントの紹介や、プロダクトの裏側、自己理解に役立つ知見をお届けします。"
+    },
+    "readMore": "続きを読む",
+    "backToList": "Journal 一覧へ",
+    "publishedOn": "{date} 公開",
+    "readingTime": "{minutes}分で読めます",
+    "empty": "まだ記事がありません。",
+    "searchPlaceholder": "記事を検索",
+    "searchLabel": "記事を検索",
+    "filterAll": "すべて",
+    "noResults": "該当する記事が見つかりませんでした。",
+    "clear": "条件をクリア",
+    "count": "{count}件",
+    "prev": "前へ",
+    "next": "次へ",
+    "pageLabel": "{page} / {total} ページ",
+    "pageMetaTitle": "Journal（{page}ページ目）"
+  },
+  "footer": {
+    "tagline": "自分を知る、ひとつのアセスメントから。",
+    "sections": {
+      "site": "サイト",
+      "service": "サービス"
+    },
+    "copyright": "© {year} Terumiu. All rights reserved.",
+    "operator": "運営：Terumiu 運営事務局"
+  },
+  "legal": {
+    "kicker": "Legal",
+    "updated": "最終更新日：{date}",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "lead": "お探しのページは移動または削除された可能性があります。",
+    "home": "トップへ戻る"
+  }
+}

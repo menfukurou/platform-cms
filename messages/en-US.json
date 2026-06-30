@@ -1,0 +1,217 @@
+{
+  "common": {
+    "brand": "Terumiu",
+    "brandFull": "Terumiu",
+    "language": {
+      "label": "Language",
+      "ja-JP": "日本語",
+      "en-US": "English"
+    }
+  },
+  "nav": {
+    "service": "Service",
+    "about": "About",
+    "journal": "Journal",
+    "contact": "Contact",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "launchApp": "Open Grader"
+  },
+  "home": {
+    "meta": {
+      "title": "Know yourself, one assessment at a time.",
+      "description": "Terumiu builds Grader, an open assessment platform for personality, skills, and interests. We craft products and insights that help you discover new sides of yourself."
+    },
+    "hero": {
+      "kicker": "Terumiu — Product Studio",
+      "title": "Know yourself,\none assessment at a time.",
+      "lead": "Personality, skills, interests. Terumiu designs open assessments anyone can try — moments that help you meet a new side of yourself.",
+      "ctaPrimary": "Explore the service",
+      "ctaSecondary": "Try Grader"
+    },
+    "visual": {
+      "title": "Your result",
+      "score": "Overall",
+      "traits": ["Curiosity", "Empathy", "Creativity", "Logic", "Drive"],
+      "tags": ["#Balanced", "#Highly curious"]
+    },
+    "stats": {
+      "items": [
+        { "value": "100+", "label": "Open assessments" },
+        { "value": "8", "label": "Languages" },
+        { "value": "Free", "label": "to start instantly" }
+      ]
+    },
+    "service": {
+      "kicker": "Our Service",
+      "title": "Grader — an open assessment platform",
+      "lead": "Personality, skills, interests. Pick an assessment, answer a few questions, and get data-driven results with fresh insight. Sign in to save and share your results.",
+      "features": [
+        {
+          "title": "A growing library",
+          "body": "From personality tests to skill checks, we continuously add open assessments for every purpose."
+        },
+        {
+          "title": "Clear results",
+          "body": "Get a visualized score and explanation right after you finish, so your tendencies are easy to grasp."
+        },
+        {
+          "title": "Multilingual",
+          "body": "Available in Japanese, English and more — the same experience, shared across the world."
+        }
+      ],
+      "cta": "Open Grader"
+    },
+    "values": {
+      "kicker": "What we value",
+      "title": "What we care about",
+      "items": [
+        {
+          "title": "Honest data design",
+          "body": "We take responsibility for how assessments are designed and shown — a trustworthy experience that never overstates."
+        },
+        {
+          "title": "Gentle products",
+          "body": "Intuitive without expertise required. We value clear, open design that welcomes everyone."
+        },
+        {
+          "title": "Always sharing",
+          "body": "We share new assessments and learnings on the Journal, offering ongoing sparks for self-understanding."
+        }
+      ]
+    },
+    "journal": {
+      "kicker": "Journal",
+      "title": "Latest updates",
+      "lead": "New assessment announcements, behind-the-scenes notes, and insights to help you understand yourself.",
+      "viewAll": "View all posts",
+      "readMore": "Read more"
+    },
+    "about": {
+      "kicker": "About us",
+      "title": "A product studio, built with care.",
+      "lead": "Terumiu is a studio that plans and runs web services and products. Today, through Grader, we deliver a way to know yourself.",
+      "cta": "About Terumiu"
+    },
+    "cta": {
+      "title": "Why not try one right now?",
+      "lead": "No sign-up needed to start. Pick an assessment that catches your eye and go meet a new side of yourself.",
+      "button": "Try Grader"
+    }
+  },
+  "service": {
+    "meta": {
+      "title": "Service",
+      "description": "Grader — the open assessment platform run by Terumiu."
+    },
+    "hero": {
+      "kicker": "Our Service",
+      "title": "Grader",
+      "lead": "An open assessment platform for personality, skills, and interests. Pick one, answer a few questions, and meet a new side of yourself.",
+      "cta": "Open Grader"
+    },
+    "capabilities": {
+      "kicker": "Features",
+      "title": "What Grader can do"
+    },
+    "howTitle": "How it works",
+    "sections": [
+      {
+        "title": "Pick an assessment",
+        "body": "Browse by category and difficulty across personality, skills, and interests. Sort by newest or most popular to find what fits."
+      },
+      {
+        "title": "Answer, get results",
+        "body": "From a handful to a few dozen questions, answer at your own pace. A visualized score and explanation appear the moment you finish."
+      },
+      {
+        "title": "Save and reflect",
+        "body": "Sign in to save your results, look back later, and compare over time. Sharing is supported too."
+      }
+    ],
+    "audience": {
+      "kicker": "Who it's for",
+      "title": "Who it's for",
+      "items": [
+        { "title": "Look at yourself anew", "body": "For those who want an objective view of their personality and strengths." },
+        { "title": "A spark to grow", "body": "For those searching for a hint toward the next step." },
+        { "title": "Use it as a team", "body": "For teams and communities that want to deepen mutual understanding." }
+      ]
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "About Terumiu — the values behind a studio that builds web services and products."
+    },
+    "hero": {
+      "kicker": "About us",
+      "title": "Small discoveries,\nthoughtfully made.",
+      "lead": "Terumiu is a studio that plans and runs web services and products. We craft every experience with care."
+    },
+    "mission": {
+      "title": "Mission",
+      "body": "Terumiu aims to spark small discoveries in everyday life through technology and design. Today, through our service Grader, we create a place where each person can meet a new side of who they are."
+    },
+    "story": {
+      "title": "Why we build",
+      "body": "Not an elaborate machine, but a product with a good feel that you just want to try. Never alarmist, always careful. We aim to make the first step as light as possible."
+    },
+    "operator": {
+      "title": "Operator",
+      "items": [
+        { "label": "Operated by", "value": "Terumiu Operations Office" },
+        { "label": "Business", "value": "Planning, development & operation of web services and products" },
+        { "label": "Current service", "value": "Grader, an open assessment platform" }
+      ],
+      "contactLabel": "Contact",
+      "contactBody": "Please reach out through our contact form."
+    }
+  },
+  "journal": {
+    "meta": {
+      "title": "Journal",
+      "description": "New assessment announcements, behind-the-scenes notes, and insights to help you understand yourself."
+    },
+    "hero": {
+      "kicker": "Journal",
+      "title": "Journal",
+      "lead": "New assessment announcements, behind-the-scenes notes, and insights to help you understand yourself."
+    },
+    "readMore": "Read more",
+    "backToList": "Back to Journal",
+    "publishedOn": "Published {date}",
+    "readingTime": "{minutes} min read",
+    "empty": "No posts yet.",
+    "searchPlaceholder": "Search posts",
+    "searchLabel": "Search posts",
+    "filterAll": "All",
+    "noResults": "No posts found.",
+    "clear": "Clear filters",
+    "count": "{count} posts",
+    "prev": "Previous",
+    "next": "Next",
+    "pageLabel": "Page {page} of {total}",
+    "pageMetaTitle": "Journal (Page {page})"
+  },
+  "footer": {
+    "tagline": "Know yourself, one assessment at a time.",
+    "sections": {
+      "site": "Site",
+      "service": "Service"
+    },
+    "copyright": "© {year} Terumiu. All rights reserved.",
+    "operator": "Operated by Terumiu Operations Office"
+  },
+  "legal": {
+    "kicker": "Legal",
+    "updated": "Last updated: {date}",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lead": "The page you're looking for may have been moved or removed.",
+    "home": "Back to home"
+  }
+}

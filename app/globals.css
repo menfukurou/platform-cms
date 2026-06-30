@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/*
+ * デザイントークン。方針: 多色グラデは「ロゴ」と「Hero の 1 アクセント」だけに留め、
+ * 本文・ボタン・装飾は ink(slate-900) と単色 violet アクセントで統一する。これで
+ * テンプレート感を消し、落ち着いたコーポレートの質感を作る。
+ */
+@theme {
+  --breakpoint-xs: 30rem;
+  --font-sans: var(--font-inter), var(--font-noto-sans-jp), ui-sans-serif, system-ui,
+    sans-serif;
+
+  /* ブランドグラデの両端と中間 (ロゴ / Hero アクセント専用)。 */
+  --color-brand-from: oklch(0.58 0.22 277);
+  --color-brand-via: oklch(0.6 0.25 300);
+  --color-brand-to: oklch(0.66 0.25 330);
+
+  /* 影は弱めに 2 段階。カードの "浮き" を上品に。 */
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-lift: 0 10px 30px -12px rgba(15, 23, 42, 0.18), 0 4px 8px -4px rgba(15, 23, 42, 0.06);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  summary,
+  a {
+    cursor: pointer;
+  }
+  button:disabled,
+  [role='button'][aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 装飾の glow / floating chip が負の inset で食み出しても横スクロールを出さない。 */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    /* 日本語の約物・かなを詰めて欧文と馴染ませる (見出しの "ぎこちなさ" 対策)。 */
+    font-feature-settings: 'palt' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklch, var(--color-violet-500) 22%, transparent);
+  }
+}
+
+/* 大見出しは行間を詰め、和欧混植のバランスを整える。 */
+@utility display {
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+/* 淡いドットグリッド背景。Hero 等の余白に質感を足す。 */
+@utility bg-grid {
+  background-image: radial-gradient(
+    color-mix(in oklch, var(--color-slate-300) 55%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+/* セクション間の縦リズムを 1 か所で管理 (上品な余白)。 */
+@utility section-y {
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+}

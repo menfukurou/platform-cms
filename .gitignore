@@ -1,0 +1,43 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js / static export
+/.next/
+/.next-build/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files — 実値は ignore、*.example だけ追跡する
+.env
+.env.*
+!.env*.example
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.claude/
+
+# OS
+Thumbs.db

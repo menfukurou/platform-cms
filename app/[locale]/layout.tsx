@@ -5,8 +5,10 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { SITE_URL, localizedSiteName, ogImage } from '@/lib/site'
+import { organizationLd, websiteLd } from '@/lib/seo'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import JsonLd from '@/components/JsonLd'
 import '@/app/globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
@@ -74,6 +76,8 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${notoSansJp.variable}`}>
       <body className="bg-slate-50 text-slate-900 antialiased">
+        <JsonLd data={organizationLd()} />
+        <JsonLd data={websiteLd(locale)} />
         <NextIntlClientProvider>
           <div className="flex min-h-screen flex-col bg-linear-to-b from-slate-50 via-white to-slate-50">
             <Header />

@@ -6,6 +6,7 @@ import { graderUrl } from '@/lib/site'
 import { getJournalList, formatDate } from '@/lib/journal'
 import { isLocale, type Locale } from '@/i18n/locales'
 import { btn } from '@/lib/ui'
+import { pageAlternates } from '@/lib/seo'
 import Container from '@/components/ui/Container'
 import Eyebrow from '@/components/ui/Eyebrow'
 import ResultCard from '@/components/visuals/ResultCard'
@@ -18,7 +19,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'home.meta' })
-  return { title: t('title'), description: t('description') }
+  return { title: t('title'), description: t('description'), alternates: pageAlternates(locale, '') }
 }
 
 export default async function HomePage({

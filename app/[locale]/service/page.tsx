@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { useLocale, useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { graderUrl } from '@/lib/site'
+import { pageAlternates } from '@/lib/seo'
 import { btn } from '@/lib/ui'
 import Container from '@/components/ui/Container'
 import Eyebrow from '@/components/ui/Eyebrow'
@@ -20,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'service.meta' })
-  return { title: t('title'), description: t('description') }
+  return { title: t('title'), description: t('description'), alternates: pageAlternates(locale, '/service') }
 }
 
 export default async function ServicePage({

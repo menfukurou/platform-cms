@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { getAllLegalParams, getLegalDoc } from '@/lib/legal'
 import { formatDate } from '@/lib/journal'
 import { isLocale, type Locale } from '@/i18n/locales'
+import { pageAlternates } from '@/lib/seo'
 import Container from '@/components/ui/Container'
 import PageHero from '@/components/PageHero'
 import MdxContent from '@/components/mdx/MdxContent'
@@ -21,7 +22,7 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {}
   const doc = getLegalDoc(locale, slug)
   if (!doc) return {}
-  return { title: doc.title, description: doc.title }
+  return { title: doc.title, description: doc.title, alternates: pageAlternates(locale, `/legal/${slug}`) }
 }
 
 export default async function LegalPage({

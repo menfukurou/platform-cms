@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { getJournalPageParams } from '@/lib/journal'
 import { isLocale, type Locale } from '@/i18n/locales'
+import { pageAlternates } from '@/lib/seo'
 import JournalListView from '@/components/journal/JournalListView'
 
 /** 2 ページ目以降を静的生成 (`/journal/page/2` ...)。1 ページ目は `/journal`。 */
@@ -17,7 +18,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, page } = await params
   const t = await getTranslations({ locale, namespace: 'journal' })
-  return { title: t('pageMetaTitle', { page }), description: t('meta.description') }
+  return {
+    title: t('pageMetaTitle', { page }),
+    description: t('meta.description'),
+    alternates: pageAlternates(locale, `/journal/page/${page}`),
+  }
 }
 
 export default async function JournalPagedPage({

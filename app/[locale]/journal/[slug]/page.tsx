@@ -9,9 +9,11 @@ import {
 } from '@/lib/journal'
 import { isLocale, type Locale } from '@/i18n/locales'
 import { ogImage } from '@/lib/site'
+import { pageAlternates, blogPostingLd, breadcrumbLd, localeUrl } from '@/lib/seo'
 import Container from '@/components/ui/Container'
 import MdxContent from '@/components/mdx/MdxContent'
 import CtaBand from '@/components/CtaBand'
+import JsonLd from '@/components/JsonLd'
 import { ArrowRight } from '@/components/icons'
 
 /** 全 locale × 全 slug をビルド時に生成。 */
@@ -31,10 +33,12 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: pageAlternates(locale, `/journal/${slug}`),
     openGraph: {
       type: 'article',
       title: post.title,
       description: post.excerpt,
+      publishedTime: post.date || undefined,
       images: [ogImage(locale)],
     },
   }
@@ -53,9 +57,24 @@ export default async function JournalPostPage({
   if (!post) notFound()
 
   const t = await getTranslations({ locale, namespace: 'journal' })
+  const path = `/journal/${slug}`
+  const articleLd = blogPostingLd({
+    locale,
+    path,
+    title: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+  })
+  const crumbLd = breadcrumbLd([
+    { name: 'Terumiu', url: localeUrl(loc, '') },
+    { name: t('hero.title'), url: localeUrl(loc, '/journal') },
+    { name: post.title, url: localeUrl(loc, path) },
+  ])
 
   return (
     <>
+      <JsonLd data={articleLd} />
+      <JsonLd data={crumbLd} />
       <article className="relative overflow-hidden pb-14 pt-12 sm:pb-20 sm:pt-16">
         <div aria-hidden className="bg-grid absolute inset-x-0 top-0 h-64 [mask-image:linear-gradient(black,transparent)] opacity-60" />
         <div aria-hidden className="absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-violet-200/40 blur-3xl" />

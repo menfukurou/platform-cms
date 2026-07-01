@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/site'
+import { SITE_URL, SITE_NAME, ogImage } from '@/lib/site'
 import { DEFAULT_LOCALE } from '@/i18n/locales'
 import './globals.css'
 
@@ -16,9 +16,36 @@ import './globals.css'
  * `/ja-JP/`、それ以外は `/en-US/` へ `location.replace` する。JS 無効時のみ
  * `<noscript>` の meta refresh で既定 (ja-JP) にフォールバックする。
  */
+/**
+ * ルート `/` は JS で言語振り分けするが、SNS のクローラ (Twitterbot 等) は JS を
+ * 実行せず素のドメイン (terumiu.com/) をそのまま読む。ここに OG/Twitter メタが無いと
+ * X などでカード画像が出ないため、ルートにも og:image 等を明示する。
+ */
+const ROOT_URL = new URL(`/${DEFAULT_LOCALE}/`, SITE_URL).toString()
+const ROOT_DESC =
+  'Terumiu は、性格・スキル・興味関心を測る公開アセスメント「Grader」を運営するプロダクトスタジオです。'
+const ROOT_TITLE = '自分を知る、ひとつのアセスメントから。'
+
 export const metadata: Metadata = {
-  title: 'Terumiu',
-  alternates: { canonical: new URL(`/${DEFAULT_LOCALE}/`, SITE_URL).toString() },
+  metadataBase: SITE_URL,
+  title: SITE_NAME,
+  description: ROOT_DESC,
+  alternates: { canonical: ROOT_URL },
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    title: ROOT_TITLE,
+    description: ROOT_DESC,
+    url: ROOT_URL,
+    locale: 'ja_JP',
+    images: [ogImage(DEFAULT_LOCALE)],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: ROOT_TITLE,
+    description: ROOT_DESC,
+    images: [ogImage(DEFAULT_LOCALE).url],
+  },
 }
 
 const REDIRECT_SCRIPT = `(function () {

@@ -31,6 +31,15 @@ export const metadata: Metadata = {
   title: SITE_NAME,
   description: ROOT_DESC,
   alternates: { canonical: ROOT_URL },
+  // Google はサイトのファビコンをホーム (= ルート) の <head> から拾うため、ルートにも明示する。
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
     type: 'website',
     siteName: SITE_NAME,
